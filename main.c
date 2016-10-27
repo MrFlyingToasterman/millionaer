@@ -142,13 +142,10 @@ int main(int argc, char** argv) {
 
 //Zufallsmethode
 int zufallszahl(int anzahl){
-     time_t t;
-    time(&t);
-    srand((unsigned int)t);
-    int rueckgabe;
-    
-    rueckgabe=("%d ", rand() % anzahl +1);
-    return rueckgabe - 1; //Gebe Zufallszahl minus 1 zurück für Array Kompatibelität
+	srand(time(NULL));
+	int rueckgabe;
+	rueckgabe=("%d ", rand() % anzahl +1);
+	return rueckgabe - 1; //Gebe Zufallszahl minus 1 zurück für Array Kompatibelität
 }
 
 //Verloren
